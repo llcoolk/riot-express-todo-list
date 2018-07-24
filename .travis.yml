@@ -1,17 +1,8 @@
 language: node_js
 node_js:
+  - "node"
   - "8"
-services: mongodb
-cache:
-  directories:
-    - "node_modules"
 install:
   - npm install
-deploy:
-  provider: script
-  skip_cleanup: true
-  script: /bin/sh deploy.sh
-  on:
-    branch: master
 script:
   - npm test
